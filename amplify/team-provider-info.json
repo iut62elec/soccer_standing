@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-leaguetablefront-dev-145517-authRole",
+      "UnauthRoleArn": "arn:aws:iam::456667773660:role/amplify-leaguetablefront-dev-145517-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::456667773660:role/amplify-leaguetablefront-dev-145517-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-leaguetablefront-dev-145517-deployment",
+      "UnauthRoleName": "amplify-leaguetablefront-dev-145517-unauthRole",
+      "StackName": "amplify-leaguetablefront-dev-145517",
+      "StackId": "arn:aws:cloudformation:us-east-1:456667773660:stack/amplify-leaguetablefront-dev-145517/e7e319d0-d63e-11ed-8d76-0e4cf07528ab",
+      "AmplifyAppId": "d5cupbab7eu34"
+    }
+  }
+}

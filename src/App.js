@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
 
-function App() {
+//import './App.css';
+import SoccerStandingsTable from './SoccerStandingsTable'
+import axios from "axios";
+import "@aws-amplify/ui-react/styles.css"; // default theme
+import { Flex, AmplifyProvider } from "@aws-amplify/ui-react";
+import { DataStore } from "@aws-amplify/datastore";
+//import { getSFworkflow } from './graphql/queries'
+import {Amplify, API, Auth, graphqlOperation, Storage} from 'aws-amplify'
+import {  withAuthenticator, AmplifyS3Image } from '@aws-amplify/ui-react';
+import awsconfig from './aws-exports';
+Amplify.configure(awsconfig);
+
+const App = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>Soccer League Standings</h1>
       </header>
+      <main>
+        <SoccerStandingsTable />
+      </main>
     </div>
   );
-}
+};
 
 export default App;
