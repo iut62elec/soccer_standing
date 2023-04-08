@@ -1,15 +1,26 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './SoccerStandingsTable.css';
 
-const initialStandings = [
-  { id: 1, team: 'Team A', played: 10, won: 7, drawn: 2, lost: 1, gf: 20, ga: 10, gd: 10, points: 23 },
-  { id: 2, team: 'Team B', played: 10, won: 5, drawn: 4, lost: 1, gf: 18, ga: 10, gd: 8, points: 19 },
-  // Add more teams here...
-];
+// AWS Amplify
+import { API, graphqlOperation } from 'aws-amplify';
+import { listTeams } from './graphql/queries';
 
 const SoccerStandingsTable = () => {
-  const [standings, setStandings] = useState(initialStandings);
+  const [standings, setStandings] = useState([]);
 
+  useEffect(() => {
+    fetchStandings();
+  }, []);
+
+  const fetchStandings = async () => {
+    try {
+      const teamData = await API.graphql(graphqlOperation(listTeams));
+      const teams = teamData.data.listTeams.items;
+      setStandings(teams);
+    } catch (error) {
+      console.error('Error fetching standings:', error);
+    }
+  };
   return (
     <div className="soccer-standings-container">
       <table className="soccer-standings-table">
