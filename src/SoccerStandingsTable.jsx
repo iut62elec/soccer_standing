@@ -44,7 +44,7 @@ const SoccerStandingsTable = () => {
             .map((team, index) => (
               <tr key={team.id}>
                 <td>{index + 1}</td>
-                <td>{team.team}</td>
+                <td>{team.name}</td>
                 <td>{team.played}</td>
                 <td>{team.won}</td>
                 <td>{team.drawn}</td>
