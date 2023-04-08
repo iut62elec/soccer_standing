@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-
+import { Team } from './models';
 //import './App.css';
 import SoccerStandingsTable from './SoccerStandingsTable'
 import axios from "axios";
