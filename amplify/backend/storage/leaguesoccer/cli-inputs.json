@@ -1,0 +1,14 @@
+{
+  "resourceName": "leaguesoccer",
+  "policyUUID": "2080651a",
+  "bucketName": "leaguetablefront5920803056974a07b937a37a83b7fdd",
+  "storageAccess": "authAndGuest",
+  "guestAccess": [
+    "READ"
+  ],
+  "authAccess": [
+    "READ"
+  ],
+  "triggerFunction": "S3Trigger2dadd9c0",
+  "groupAccess": {}
+}

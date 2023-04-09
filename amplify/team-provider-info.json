@@ -14,6 +14,18 @@
     "categories": {
       "api": {
         "leaguetablefront": {}
+      },
+      "auth": {
+        "leaguetablefront1eb9a557": {}
+      },
+      "function": {
+        "S3Trigger2dadd9c0": {
+          "deploymentBucketName": "amplify-leaguetablefront-dev-145517-deployment",
+          "s3Key": "amplify-builds/S3Trigger2dadd9c0-64353573374f47306341-build.zip"
+        }
+      },
+      "storage": {
+        "leaguesoccer": {}
       }
     }
   }

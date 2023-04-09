@@ -21,5 +21,75 @@
       "providerPlugin": "awscloudformation",
       "service": "AppSync"
     }
+  },
+  "auth": {
+    "leaguetablefront1eb9a557": {
+      "customAuth": false,
+      "dependsOn": [],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyCharacters": [],
+          "passwordPolicyMinLength": 8
+        },
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "socialProviders": [],
+        "usernameAttributes": [
+          "EMAIL"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito"
+    }
+  },
+  "function": {
+    "S3Trigger2dadd9c0": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_S3Trigger2dadd9c0_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "S3Trigger2dadd9c0"
+        }
+      ]
+    },
+    "AMPLIFY_function_S3Trigger2dadd9c0_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "S3Trigger2dadd9c0"
+        }
+      ]
+    }
+  },
+  "storage": {
+    "leaguesoccer": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn",
+            "LambdaExecutionRole"
+          ],
+          "category": "function",
+          "resourceName": "S3Trigger2dadd9c0"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "S3"
+    }
   }
 }

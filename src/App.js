@@ -10,19 +10,23 @@ import { DataStore } from "@aws-amplify/datastore";
 import {Amplify, API, Auth, graphqlOperation, Storage} from 'aws-amplify'
 import {  withAuthenticator, AmplifyS3Image } from '@aws-amplify/ui-react';
 import awsconfig from './aws-exports';
+import Schedule from './Schedule';
+
 Amplify.configure(awsconfig);
 
 const App = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Long Island Soccer League Standings</h1>
+        <h1>Long Island Men's Soccer 2023</h1>
       </header>
       <main>
         <SoccerStandingsTable />
+        <Schedule />
       </main>
     </div>
   );
 };
 
-export default App;
+//export default App;
+export default withAuthenticator(App);
