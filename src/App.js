@@ -85,8 +85,15 @@ function Contact() {
       <h1 className="mb-3"></h1>
       <p>
         <strong></strong> Syl Cangero 
+        
+        <strong>  Email:</strong> <a href="mailto:sylmeg@aol.com">sylmeg@aol.com</a>
+      
         <br></br>
-        <strong> Email:</strong> <a href="mailto:sylmeg@aol.com">sylmeg@aol.com</a>
+
+        <strong></strong> Pedram Jahangiri 
+        
+        <strong>  Email:</strong> <a href="mailto:sylmeg@aol.com">pedram.jahangiri62@gmail.com</a>
+      
       </p>
     </div>
   );
