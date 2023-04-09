@@ -24,7 +24,8 @@ class App extends React.Component {
   };
 
   async componentDidMount() {
-    const imageUrl = await Storage.get('soccer_2.jpg');
+    //const imageUrl = await Storage.get('soccer_2.jpg');
+    const imageUrl = await Storage.get('soccer_large_ball.jpg');
     this.setState({ imageUrl });
   }
 
