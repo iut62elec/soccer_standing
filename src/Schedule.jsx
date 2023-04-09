@@ -28,7 +28,7 @@ const Schedule = () => {
 
   return (
     <div>
-      <h2>Schedule</h2>
+      <h2></h2>
       {pdfUrl && (
         <Document file={pdfUrl} onLoadSuccess={onDocumentLoadSuccess}>
           {Array.from(new Array(numPages), (el, index) => (

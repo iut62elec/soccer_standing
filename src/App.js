@@ -47,6 +47,9 @@ class App extends React.Component {
                   <Nav.Link as={Link} to="/schedule">
                     Schedules
                   </Nav.Link>
+                  <Nav.Link as={Link} to="/contact">
+                    Contact
+                  </Nav.Link>
                 </Nav>
               </Navbar.Collapse>
             </Container>
@@ -57,6 +60,8 @@ class App extends React.Component {
               <Route path="/" element={<Home imageUrl={this.state.imageUrl} />} />
               <Route path="/standings" element={<SoccerStandingsTable />} />
               <Route path="/schedule" element={<Schedule />} />
+              <Route path="/contact" element={<Contact />} />
+
             </Routes>
           </Container>
         </div>
@@ -70,6 +75,18 @@ function Home({ imageUrl }) {
     <div>
       <h1 className="mb-3"></h1>
       {imageUrl && <img src={imageUrl} alt="Home" className="img-fluid" />}
+    </div>
+  );
+}
+function Contact() {
+  return (
+    <div>
+      <h1 className="mb-3"></h1>
+      <p>
+        <strong></strong> Syl Cangero 
+        <br></br>
+        <strong> Email:</strong> <a href="mailto:sylmeg@aol.com">sylmeg@aol.com</a>
+      </p>
     </div>
   );
 }
